@@ -309,7 +309,7 @@ namespace SeafClient
         /// <summary>
         ///     Retrieve information for the library with the given id
         /// </summary>
-        public async Task<SeafLibrary> GetLibraryInfo(string libraryId)
+        public async Task<SeafLibraryInfo> GetLibraryInfo(string libraryId)
         {
             var request = new GetLibraryInfoRequest(AuthToken, libraryId);
             return await _webConnection.SendRequestAsync(ServerUri, request);
@@ -322,6 +322,12 @@ namespace SeafClient
         public async Task<IList<SeafLibrary>> ListLibraries()
         {
             var request = new ListLibrariesRequest(AuthToken);
+            return await _webConnection.SendRequestAsync(ServerUri, request);
+        }
+        
+        public async Task<IList<GroupSeafLibrary>> LibrariesByGroup(int groupId)
+        {
+            var request = new LibrariesByGroupRequest(AuthToken, groupId);
             return await _webConnection.SendRequestAsync(ServerUri, request);
         }
 

@@ -10,7 +10,7 @@ namespace SeafClient.Requests.Libraries
     /// <summary>
     /// Returns the library information for a given library id
     /// </summary>
-    public class GetLibraryInfoRequest : SessionRequest<SeafLibrary>
+    public class GetLibraryInfoRequest : SessionRequest<SeafLibraryInfo>
     {
         public string LibraryId { get; set; }
 
