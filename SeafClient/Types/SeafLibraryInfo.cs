@@ -1,6 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
-using SeafClient.Converters;
+﻿using Newtonsoft.Json;
 
 namespace SeafClient.Types
 {

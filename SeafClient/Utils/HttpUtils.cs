@@ -16,6 +16,7 @@ namespace SeafClient.Utils
         /// <param name="method">The HTTP method</param>
         /// <param name="uri">The uri to get</param>
         /// <param name="headerInfo">Additional headers to be added to the HTTP GET request</param>
+        /// <param name="bodyParams"></param>
         /// <returns>The http response</returns>
         public static HttpRequestMessage CreateRequest(HttpMethod method, Uri uri, IEnumerable<KeyValuePair<string, string>> headerInfo, IEnumerable<KeyValuePair<string, string>> bodyParams)
         {

@@ -8,9 +8,6 @@ using SeafClient;
 using SeafClient.Exceptions;
 using SeafClient.Types;
 using SeafClient.Requests.Directories;
-using System.IO;
-using System.Net.Http;
-using System.Reflection;
 using SeafClient.Requests.Groups;
 
 namespace SeafConsole
