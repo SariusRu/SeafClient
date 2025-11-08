@@ -112,7 +112,7 @@ namespace SeafClient
                 if (!Version.TryParse(verResponse.Version, out v))
                     v = new Version(0, 0, 0);
             }
-            catch (Exception e)
+            catch
             {
                 v = new Version(0, 0, 0);
             }
@@ -156,7 +156,7 @@ namespace SeafClient
                 if (!Version.TryParse(verResponse.Version, out v))
                     v = new Version(0, 0, 0);
             }
-            catch (Exception e)
+            catch
             {
                 v = new Version(0, 0, 0);
             }
