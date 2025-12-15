@@ -559,6 +559,16 @@ namespace SeafClient
             var request = new GetFileDetailRequest(AuthToken, libraryId, filePath);
             return await _webConnection.SendRequestAsync(ServerUri, request);
         }
+        
+        public async Task<IList<SeafDirEntry>> SearchFiles(string libraryId, string filePath, string query)
+        {
+            libraryId.ThrowOnNull(nameof(libraryId));
+            filePath.ThrowOnNull(nameof(filePath));
+            query.ThrowOnNull(nameof(query));
+
+            var request = new SearchFilesRequest(AuthToken, libraryId, filePath, query);
+            return await _webConnection.SendRequestAsync(ServerUri, request);
+        }
 
         /// <summary>
         ///     Rename the given file
